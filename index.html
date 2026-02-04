@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dhimas Ilham | Data Scientist</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">PORTOFOLIO<span class="dot"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sertifikat">Sertifikat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Hubungi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero d-flex align-items-center">
+        <div class="container text-center" data-aos="zoom-in">
+            <p class="greeting">Halo, saya Dhimas Ilham 👋</p>
+            <h1 class="display-3 fw-bold">Exploring <span class="gradient-text">Data & Network</span></h1>
+            <p class="lead"><span id="typed-text"></span></p>
+            <div class="mt-4">
+                <a href="#proyek" class="btn btn-primary me-2">Lihat Portfolio</a>
+                <a href="assets/dokumen/Dhimas.pdf" class="btn btn-outline-light" download>Download CV</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="tentang">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right">
+                        <div class="profile-circle-wrapper">
+                            <img src="assets/images/foto-profil.jpg" alt="Dhimas Ilham" class="profile-img-round">
+                        </div>
+                    </div>
+                    <div class="col-md-7" data-aos="fade-left">
+                        <h2>Tentang <span class="text-highlight">Saya</span></h2>
+                        <p class="about-text">
+                            Mahasiswa semester 5 jurusan <strong>Ilmu Komputer</strong> di Universitas Bhayangkara. 
+                            Saya memiliki passion mendalam dalam menerjemahkan data menjadi wawasan (Data Science) 
+                            dan membangun infrastruktur jaringan yang handal.
+                        </p>
+                        <div class="tech-stack mt-4">
+                            <p class="mb-2 text-white fw-bold">Tech Stack:</p>
+                            <i class="bi bi-filetype-py" title="Python"></i>
+                            <i class="bi bi-filetype-html" title="HTML5"></i>
+                            <i class="bi bi-filetype-css" title="CSS3"></i>
+                            <i class="bi bi-filetype-js" title="JavaScript"></i>
+                            <i class="bi bi-database" title="SQL"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyek">
+            <div class="container-fluid ps-lg-5">
+                <div class="container">
+                    <div class="text-center mb-4" data-aos="fade-up">
+                        <h2>Proyek <span class="text-highlight">Unggulan</span></h2>
+                        <p class="text-light-gray">Geser ke samping untuk melihat lebih banyak.</p>
+                    </div>
+
+                    <div class="row text-center mb-4" data-aos="fade-up">
+                        <div class="col-12">
+                            <button class="filter-btn active" data-filter="all">Semua</button>
+                            <button class="filter-btn" data-filter="website">Website</button>
+                            <button class="filter-btn" data-filter="data">Data</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="horizontal-scroll-container" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <div class="scroll-item project-item" data-category="website">
+                        <div class="card project-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/proyek1.png" class="card-img-top" alt="Project 1">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge-custom">Web Dev</span>
+                                <h5 class="card-title mt-2">Catalog Film</h5>
+                                <p class="card-text">Aplikasi katalog film interaktif menggunakan API publik.</p>
+                                <div class="card-links">
+                                    <a href="https://websitehostt.github.io/catalog-film/" target="_blank" class="link-item"><i class="bi bi-eye"></i> Demo</a>
+                                    <a href="https://github.com/websitehostt/catalog-film.git" target="_blank" class="link-item"><i class="bi bi-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-item project-item" data-category="website">
+                        <div class="card project-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/proyek2.png" class="card-img-top" alt="Project 2">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge-custom">UI/UX</span>
+                                <h5 class="card-title mt-2">Aroma Kisah Kopi</h5>
+                                <p class="card-text">Landing page estetis untuk bisnis kedai kopi lokal.</p>
+                                <div class="card-links">
+                                    <a href=" https://websitehostt.github.io/aroma-kisah/" target="_blank" class="link-item"><i class="bi bi-eye"></i> Demo</a>
+                                    <a href="https://github.com/websitehostt/aroma-kisah.git" target="_blank" class="link-item"><i class="bi bi-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-item project-item" data-category="website">
+                        <div class="card project-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/images/proyek3.png" class="card-img-top" alt="Project 3">
+                            </div>
+                            <div class="card-body">
+                                <span class="badge-custom">Frontend</span>
+                                <h5 class="card-title mt-2">Mading Digital</h5>
+                                <p class="card-text">Platform informasi sekolah digital modern.</p>
+                                <div class="card-links">
+                                    <a href=" https://websitehostt.github.io/mading-digital/" target="_blank" class="link-item"><i class="bi bi-eye"></i> Demo</a>
+                                    <a href="https://github.com/websitehostt/mading-digital.git" target="_blank" class="link-item"><i class="bi bi-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sertifikat">
+            <div class="container-fluid ps-lg-5">
+                <div class="container text-center mb-5" data-aos="fade-up">
+                    <h2>Sertifikasi <span class="text-highlight">Resmi</span></h2>
+                </div>
+                
+                <div class="horizontal-scroll-container certificate-gallery" data-aos="zoom-in">
+                    <div class="scroll-item cert-item">
+                        <a href="assets/images/sertifikat1.jpg" class="cert-link">
+                            <img src="assets/images/sertifikat1.jpg" alt="Sertifikat" class="certificate-img">
+                            <div class="cert-overlay"><i class="bi bi-zoom-in"></i></div>
+                        </a>
+                    </div>
+                    <div class="scroll-item cert-item">
+                        <a href="assets/images/sertifikat2.jpg" class="cert-link">
+                            <img src="assets/images/sertifikat2.jpg" alt="Sertifikat" class="certificate-img">
+                            <div class="cert-overlay"><i class="bi bi-zoom-in"></i></div>
+                        </a>
+                    </div>
+                    <div class="scroll-item cert-item">
+                        <a href="assets/images/sertifikat3.jpg" class="cert-link">
+                            <img src="assets/images/sertifikat3.jpg" alt="Sertifikat" class="certificate-img">
+                            <div class="cert-overlay"><i class="bi bi-zoom-in"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontak">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-right">
+                    <h2 class="mb-3">Let's <span class="text-highlight">Connect!</span></h2>
+                    <p class="text-light-gray mb-4">Punya proyek menarik atau ingin diskusi soal Data Science? Hubungi saya.</p>
+                    <div class="social-links">
+                        <a href="mailto:ilhamdhimas366@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/dhimas-ilham-firmansyah-0097aa28a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/websitehostt" target="_blank"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <form action="https://formspree.io/f/mnngbeyj" method="POST" class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" rows="4" placeholder="Tulis pesan..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Kirim Pesan <i class="bi bi-send"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center pt-5 mt-5 border-top border-secondary">
+                <p class="mb-0 text-muted copyright">&copy; 2025 Dhimas Ilham Firmansyah. Built with Code & Coffee.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

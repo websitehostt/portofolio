@@ -42,12 +42,10 @@ h1, h2, h3, h5 { font-weight: 800; color: #fff; letter-spacing: -0.5px; }
     margin-bottom: 10px;
 }
 
-/* --- GLOBAL SECTION STYLING (INI FIX NYA) --- */
+/* --- GLOBAL SECTION STYLING --- */
 section {
-    padding-top: 40px;    /* Jarak visual */
-    padding-bottom: 80px; /* Jarak bawah */
-    /* FITUR RAHASIA: scroll-margin-top */
-    /* Ini bikin browser berhenti 100px sebelum elemen, jadi gak ketutupan navbar */
+    padding-top: 40px;    
+    padding-bottom: 80px; 
     scroll-margin-top: 100px; 
 }
 
@@ -70,11 +68,11 @@ section {
 
 /* Navbar */
 .navbar {
-    background: rgba(5, 5, 5, 0.95); /* Lebih pekat biar teks gak tabrakan visual */
+    background: rgba(5, 5, 5, 0.95);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--glass-border);
     padding: 15px 0;
-    height: 80px; /* Tinggi pasti navbar */
+    height: 80px;
 }
 .navbar-brand { font-weight: 800; font-size: 1.5rem; color: #fff; }
 .navbar-brand .dot { color: var(--primary); font-size: 2rem; line-height: 0; }
@@ -85,7 +83,7 @@ section {
 /* Hero */
 .hero { 
     min-height: 100vh; 
-    padding-top: 120px; /* Tambah jarak karena ada navbar */
+    padding-top: 120px; 
     display: flex;
     align-items: center;
 }
@@ -103,7 +101,7 @@ section {
 }
 .btn-outline-light { border-radius: 50px; padding: 10px 30px; }
 
-/* --- PROFILE PICTURE (TETAP BULAT) --- */
+/* --- PROFILE PICTURE --- */
 .profile-circle-wrapper {
     width: 280px;
     height: 280px;
@@ -135,11 +133,11 @@ section {
 .tech-stack i:hover { color: var(--primary); transform: translateY(-5px); text-shadow: 0 0 10px var(--primary); }
 
 
-/* --- HORIZONTAL SCROLL LAYOUT --- */
+/* --- PROJECT SCROLL LAYOUT (UNTUK PROYEK) --- */
 .horizontal-scroll-container {
     display: flex;
     overflow-x: auto;
-    gap: 30px; /* Jarak antar kartu lebih lega */
+    gap: 30px;
     padding: 20px 10px 50px 10px; 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; 
@@ -152,8 +150,8 @@ section {
 
 .scroll-item {
     flex: 0 0 auto; 
-    width: 360px;   /* Lebar kartu sedikit dibesarkan */
-    scroll-snap-align: center; /* Biar pas scroll berhentinya di tengah */
+    width: 360px; 
+    scroll-snap-align: center;
 }
 @media (max-width: 768px) {
     .scroll-item { width: 85vw; } 
@@ -201,20 +199,6 @@ section {
 }
 .link-item:hover { color: var(--primary) !important; text-shadow: 0 0 5px var(--primary); }
 
-/* --- CERTIFICATES --- */
-.cert-link { display: block; border-radius: 12px; position: relative; overflow: hidden; }
-.certificate-img { 
-    width: 100%; border-radius: 12px; transition: 0.5s; 
-    border: 1px solid var(--glass-border);
-}
-.cert-overlay {
-    position: absolute; inset: 0; background: rgba(112, 0, 255, 0.6);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: 0.3s; font-size: 2rem; color: #fff;
-}
-.cert-link:hover .cert-overlay { opacity: 1; }
-.cert-link:hover .certificate-img { transform: scale(1.05); border-color: var(--secondary); }
-
 /* --- CONTACT FORM --- */
 .contact-form .form-control {
     background: rgba(255, 255, 255, 0.05); 
@@ -259,3 +243,70 @@ section {
 }
 .back-to-top.active { opacity: 1; visibility: visible; }
 .back-to-top:hover { background: var(--primary); color: #000; }
+
+/* ========================================= */
+/* --- FIX KHUSUS SERTIFIKAT (YANG PENTING) --- */
+/* ========================================= */
+
+/* Wadah Sertifikat (Geser Samping) */
+.cert-horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;          /* INI KUNCINYA: Paksa jangan turun ke bawah */
+    overflow-x: auto;           /* Aktifin scroll samping */
+    gap: 20px;                  /* Jarak antar sertifikat */
+    padding: 20px 5px 30px 5px; /* Padding biar scrollbar gak nempel */
+    scroll-behavior: smooth;    /* Scroll jadi halus */
+    -webkit-overflow-scrolling: touch; 
+    justify-content: flex-start;
+}
+
+/* Scrollbar khusus wadah sertifikat */
+.cert-horizontal-scroll::-webkit-scrollbar { height: 8px; }
+.cert-horizontal-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
+.cert-horizontal-scroll::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+.cert-horizontal-scroll::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* Kartu/Item Sertifikat */
+.cert-card-fix {
+    flex: 0 0 auto;             /* Jangan biarkan kartu mengecil/gepeng */
+    width: 300px;               /* Lebar sertifikat (bisa diatur sesuai selera) */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--glass-border);
+    background: #000;
+}
+
+/* Responsif buat HP */
+@media (max-width: 768px) {
+    .cert-card-fix {
+        width: 85vw; /* Di HP lebarnya 85% layar biar enak swipe */
+    }
+}
+
+/* Efek Hover */
+.cert-card-fix:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 242, 234, 0.15);
+}
+
+.cert-card-fix img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cert-link {
+    display: block;
+    position: relative;
+}
+
+/* Overlay pas hover gambar */
+.cert-overlay {
+    position: absolute; inset: 0; background: rgba(112, 0, 255, 0.6);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: 0.3s; font-size: 2rem; color: #fff;
+}
+.cert-card-fix:hover .cert-overlay { opacity: 1; }
